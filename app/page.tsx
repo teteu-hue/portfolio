@@ -343,7 +343,7 @@ export default function Home() {
                 <Card key={index} className="overflow-hidden">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt="Imagem de projetos"
                     className="h-48 w-full object-cover"
                   />
                   <CardContent className="mt-4">
