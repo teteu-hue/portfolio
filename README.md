@@ -1,0 +1,5 @@
+# Portfólio
+
+Desenvolvedor Web com uma trajetória autodidata iniciada aos 22 anos, com formação na Trybe, onde desenvolvi uma base sólida em Lógica de Programação. Desde então, venho me especializando em desenvolvimento full-stack, com experiência em JavaScript, Node.js, Express, MySQL, React Native e Angular, além de aprofundar meus conhecimentos nas stacks PHP, Laravel e PostgreSQL. Atualmente, estou aprimorando minhas habilidades com Laravel e segurança em APIs, com foco em autenticação OAuth2 usando Passport. Tenho experiência na criação de sites para e-commerce, venda de serviços digitais e desenvolvimento de sistemas customizados, sempre buscando as melhores práticas em desenvolvimento web. No meu tempo livre, pratico capoeira, ando de bicicleta e gosto de me dedicar à leitura e escrita sobre temas que me fascinam
+
+Amo criar soluções elegantes para problemas complexos e estou sempre ansioso para aprender novas tecnologias. Quando não estou programando, você pode me encontrar contribuindo para projetos open-source ou escrevendo posts técnicos em blog.
