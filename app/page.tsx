@@ -373,12 +373,12 @@ export default function Home() {
                     {Object.entries(translateSkills(hardSkills, language)).map(([category, skills]) => (
                       <div key={category} className="mb-6">
                         <h3 className="mb-3 text-xl font-semibold">{category}</h3>
-                        {typeof skills === 'object' && !Array.isArray(skills) ? (
+                        {typeof skills === 'object' && skills !== null && !Array.isArray(skills) ? (
                           Object.entries(skills).map(([subCategory, subSkills]) => (
                             <div key={subCategory} className="mb-4">
                               <h4 className="mb-2 text-lg font-medium">{subCategory}</h4>
                               <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-                                {subSkills.map((skill, index) => (
+                                {subSkills.map((skill: any, index: any) => (
                                   <div
                                     key={index}
                                     className="rounded-lg bg-secondary p-3 text-center text-sm"
@@ -408,7 +408,7 @@ export default function Home() {
                   <div>
                     <h2 className="mb-4 text-2xl font-bold">{language === "en" ? "Soft Skills" : "Soft Skills"}</h2>
                     <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
-                      {translateSkills(softSkills, language).map((skill, index) => (
+                      {translateSkills(softSkills, language).map((skill: any, index: any) => (
                         <div
                           key={index}
                           className="rounded-lg bg-secondary p-3 text-center text-sm"
