@@ -319,19 +319,14 @@ export default function Home() {
                 <p>
                   {language === "en"
                     ? `
-                    Web Developer with a self-taught journey that started at 22, with training at Trybe, where I developed a solid foundation in Programming Logic. Since then, I’ve been specializing in full-stack development, with experience in JavaScript, Node.js, Express, MySQL, React Native, and Angular, in addition to deepening my knowledge in PHP, Laravel, and PostgreSQL stacks. Currently, I’m enhancing my skills with Laravel and API security, focusing on OAuth2 authentication using Passport. I have experience in creating websites for e-commerce, digital services sales, and developing custom systems, always seeking the best practices in web development. In my spare time, I practice capoeira, ride my bike, and enjoy reading and writing about topics that fascinate me.
-                    I love creating elegant solutions to complex problems and am always eager to learn new technologies. When I’m not coding, you can find me contributing to open-source projects or writing technical blog posts.
-                    `
+                    I am a web developer with a self-taught journey that began at the age of 22, with training at Trybe, where I built a solid foundation in Programming Logic. Since then, I have been specializing in Back-End development, with experience in Node.js, Express, MySQL, React Native, and Angular, in addition to deepening my knowledge in the PHP, Laravel, and PostgreSQL stacks.
+                    I focus on web application security, preventing SQL Injection, with an emphasis on OAuth2 authentication and JWT for Rest APIs.
+                    In my free time, I practice capoeira, ride my bike, and enjoy dedicating myself to reading and writing about topics that fascinate me.`
                     : `
-                    Desenvolvedor Web com uma trajetória autodidata iniciada aos 22 anos, com formação na Trybe, onde desenvolvi uma base sólida em Lógica de Programação. Desde então, venho me especializando em desenvolvimento full-stack, com experiência em JavaScript, Node.js, Express, MySQL, React Native e Angular, além de aprofundar meus conhecimentos nas stacks PHP, Laravel e PostgreSQL.
-                    Atualmente, estou aprimorando minhas habilidades com Laravel e segurança em APIs, com foco em autenticação OAuth2 usando Passport. Tenho experiência na criação de sites para e-commerce, venda de serviços digitais e desenvolvimento de sistemas customizados, sempre buscando as melhores práticas em desenvolvimento web.
-                    No meu tempo livre, pratico capoeira, ando de bicicleta e gosto de me dedicar à leitura e escrita sobre temas que me fascinam
+                    Sou desenvolvedor web com uma trajetória autodidata iniciada aos 22 anos, com formação na Trybe, onde desenvolvi uma base sólida em Lógica de Programação. Desde então, venho me especializando em desenvolvimento Back-End, com experiência em  Node.js, Express, MySQL, React Native e Angular, além de aprofundar meus conhecimentos nas stacks PHP, Laravel e PostgreSQL. 
+                    Tenho foco em segurança das aplicações web, prevenindo SQL Injection e com ênfase em autenticação OAuth2 e JWT para APIs Rest. 
+                    No meu tempo livre, pratico capoeira, ando de bicicleta e gosto de me dedicar à leitura e escrita sobre temas que me fascinam.
                     `}
-                </p>
-                <p>
-                  {language === "en"
-                    ? "I love creating elegant solutions to complex problems and am always eager to learn new technologies. When I'm not coding, you can find me contributing to open-source projects or writing technical blog posts."
-                    : "Amo criar soluções elegantes para problemas complexos e estou sempre ansioso para aprender novas tecnologias. Quando não estou programando, você pode me encontrar contribuindo para projetos open-source ou escrevendo posts técnicos em blog."}
                 </p>
               </CardContent>
             </Card>
