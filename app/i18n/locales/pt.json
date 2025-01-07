@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "contact": "Entre em contato",
+    "timeline": "Linha do Tempo"
+  },
+  "hero": {
+    "title": "Jefferson Oliveira",
+    "role": "Desenvolvedor Back-end"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Mensagem",
+    "submit": "Enviar Mensagem"
+  }
+}
