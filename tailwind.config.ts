@@ -12,7 +12,7 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+          'conic-gradient(from 180deg at 50% 50%, #F2F2F2,rgb(209, 20, 20))'
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -20,6 +20,7 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
+        darkBackGround: "#000000",
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

@@ -213,7 +213,7 @@ export default function Home() {
   //const onSubmit = async (data: z.infer<typeof contactFormSchema>) => {
   //  console.log(data);
   //};
-
+theme
   const downloadResume = () => {
     const resumeUrl = "/curriculo/Profile.pdf";
     const link = document.createElement("a");
@@ -225,7 +225,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-background to-secondary">
+    <main className="min-h-screen bg-lightBackground-to-b from-lightBackground darkBackground">
       {/* Theme and Language Controls */}
       <div className="fixed right-4 top-4 flex gap-2">
         <Button
@@ -287,14 +287,9 @@ export default function Home() {
 
       {/* Main Content */}
       <section className="container mx-auto px-4 pb-20">
-        <Tabs defaultValue="about" className="mx-auto max-w-4xl">
+        <Tabs defaultValue="projects" className="mx-auto max-w-4xl">
 
           <TabsList className="flex w-full justify-between items-center space-x-4">
-
-            <TabsTrigger value="about">
-              <User className="mr-2 h-4 w-full" />
-              {language === "en" ? "About me" : "Sobre mim"}
-            </TabsTrigger>
 
             <TabsTrigger value="projects">
               <Code className="mr-2 h-4 w-full" />
@@ -311,26 +306,12 @@ export default function Home() {
               {language === "en" ? "Experiences" : "Experiências"}
             </TabsTrigger>
 
-          </TabsList>
+            <TabsTrigger value="about">
+              <User className="mr-2 h-4 w-full" />
+              {language === "en" ? "About me" : "Sobre mim"}
+            </TabsTrigger>
 
-          <TabsContent value="about" className="mt-6">
-            <Card>
-              <CardContent className="prose prose-lg mt-6 dark:prose-invert">
-                <p>
-                  {language === "en"
-                    ? `
-                    I am a web developer with a self-taught journey that began at the age of 22, with training at Trybe, where I built a solid foundation in Programming Logic. Since then, I have been specializing in Back-End development, with experience in Node.js, Express, MySQL, React Native, and Angular, in addition to deepening my knowledge in the PHP, Laravel, and PostgreSQL stacks.
-                    I focus on web application security, preventing SQL Injection, with an emphasis on OAuth2 authentication and JWT for Rest APIs.
-                    In my free time, I practice capoeira, ride my bike, and enjoy dedicating myself to reading and writing about topics that fascinate me.`
-                    : `
-                    Sou desenvolvedor web com uma trajetória autodidata iniciada aos 22 anos, com formação na Trybe, onde desenvolvi uma base sólida em Lógica de Programação. Desde então, venho me especializando em desenvolvimento Back-End, com experiência em  Node.js, Express, MySQL, React Native e Angular, além de aprofundar meus conhecimentos nas stacks PHP, Laravel e PostgreSQL. 
-                    Tenho foco em segurança das aplicações web, prevenindo SQL Injection e com ênfase em autenticação OAuth2 e JWT para APIs Rest. 
-                    No meu tempo livre, pratico capoeira, ando de bicicleta e gosto de me dedicar à leitura e escrita sobre temas que me fascinam.
-                    `}
-                </p>
-              </CardContent>
-            </Card>
-          </TabsContent>
+          </TabsList>
 
           <TabsContent value="projects" className="mt-6">
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -436,6 +417,25 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="about" className="mt-6">
+            <Card>
+              <CardContent className="prose prose-lg mt-6 dark:prose-invert">
+                <p>
+                  {language === "en"
+                    ? `
+                    I am a web developer with a self-taught journey that began at the age of 22, with training at Trybe, where I built a solid foundation in Programming Logic. Since then, I have been specializing in Back-End development, with experience in Node.js, Express, MySQL, React Native, and Angular, in addition to deepening my knowledge in the PHP, Laravel, and PostgreSQL stacks.
+                    I focus on web application security, preventing SQL Injection, with an emphasis on OAuth2 authentication and JWT for Rest APIs.
+                    In my free time, I practice capoeira, ride my bike, and enjoy dedicating myself to reading and writing about topics that fascinate me.`
+                    : `
+                    Sou desenvolvedor web com uma trajetória autodidata iniciada aos 22 anos, com formação na Trybe, onde desenvolvi uma base sólida em Lógica de Programação. Desde então, venho me especializando em desenvolvimento Back-End, com experiência em  Node.js, Express, MySQL, React Native e Angular, além de aprofundar meus conhecimentos nas stacks PHP, Laravel e PostgreSQL. 
+                    Tenho foco em segurança das aplicações web, prevenindo SQL Injection e com ênfase em autenticação OAuth2 e JWT para APIs Rest. 
+                    No meu tempo livre, pratico capoeira, ando de bicicleta e gosto de me dedicar à leitura e escrita sobre temas que me fascinam.
+                    `}
+                </p>
               </CardContent>
             </Card>
           </TabsContent>
