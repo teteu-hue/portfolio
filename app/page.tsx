@@ -291,22 +291,22 @@ theme
 
           <TabsList className="flex w-full justify-between items-center space-x-4">
 
-            <TabsTrigger value="projects">
+            <TabsTrigger value="projects" className="data-[state=active]:bg-orange-600 data-[state=active]:text-white hover:bg-orange-400 hover:text-white active:bg-orange-700 focus:ring focus:ring-orange-400">
               <Code className="mr-2 h-4 w-full" />
               {language === "en" ? "Projects" : "Projetos"}
             </TabsTrigger>
 
-            <TabsTrigger value="skills">
+            <TabsTrigger className="data-[state=active]:bg-orange-600 data-[state=active]:text-white hover:bg-orange-400 hover:text-white active:bg-orange-700 focus:ring focus:ring-orange-400" value="skills">
               <Briefcase className="mr-2 h-4 w-full" />
               {language === "en" ? "Skills" : "Habilidades"}
             </TabsTrigger>
 
-            <TabsTrigger value="timeline">
+            <TabsTrigger className="data-[state=active]:bg-orange-600 data-[state=active]:text-white hover:bg-orange-400 hover:text-white active:bg-orange-700 focus:ring focus:ring-orange-400" value="timeline">
               <Clock className="mr-2 h-4 w-full" />
               {language === "en" ? "Experiences" : "Experiências"}
             </TabsTrigger>
 
-            <TabsTrigger value="about">
+            <TabsTrigger className="data-[state=active]:bg-orange-600 data-[state=active]:text-white hover:bg-orange-400 hover:text-white active:bg-orange-700 focus:ring focus:ring-orange-400" value="about">
               <User className="mr-2 h-4 w-full" />
               {language === "en" ? "About me" : "Sobre mim"}
             </TabsTrigger>
@@ -329,8 +329,8 @@ theme
                     <p className="mb-4 text-muted-foreground">
                       {language === "en" ? project.description.en : project.description.pt}
                     </p>
-                    <Button variant="outline" asChild>
-                      <a href={project.link}>
+                    <Button variant="outline" className="hover:bg-orange-400 hover:text-white active:bg-orange-700 focus:ring focus:ring-orange-400" asChild>
+                      <a href={project.link} target="_blank">
                         {language === "en" ? "View Project" : "Ver Projeto"}
                       </a>
                     </Button>
@@ -357,7 +357,7 @@ theme
                                 {subSkills.map((skill: any, index: any) => (
                                   <div
                                     key={index}
-                                    className="rounded-lg bg-secondary p-3 text-center text-sm"
+                                    className="rounded-lg bg-secondary p-3 text-center text-sm hover:bg-orange-400 hover:text-white"
                                   >
                                     {skill}
                                   </div>
@@ -370,7 +370,7 @@ theme
                             {(skills as string[]).map((skill, index) => (
                               <div
                                 key={index}
-                                className="rounded-lg bg-secondary p-3 text-center text-sm"
+                                className="rounded-lg bg-secondary p-3 text-center text-sm hover:bg-orange-400 hover:text-white"
                               >
                                 {skill}
                               </div>
@@ -387,7 +387,7 @@ theme
                       {translateSkills(softSkills, language).map((skill: any, index: any) => (
                         <div
                           key={index}
-                          className="rounded-lg bg-secondary p-3 text-center text-sm"
+                          className="rounded-lg bg-secondary p-3 text-center text-sm hover:bg-orange-400 hover:text-white"
                         >
                           {skill}
                         </div>
