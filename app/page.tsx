@@ -103,7 +103,9 @@ export default function Home() {
       "Proatividade": "Proactivity",
       "Capacidade de adaptação": "Adaptability",
       "Comunicação interpessoal": "Interpersonal Communication",
-      "Gerenciamento de tempo": "Time Management"
+      "Gerenciamento de tempo": "Time Management",
+      "Inteligência Emocional": "Emotional Intelligence",
+      "Resiliência": "Resilience",
     },
     pt: {
       "Desenvolvimento Web": "Desenvolvimento Web",
@@ -140,7 +142,9 @@ export default function Home() {
       "Proatividade": "Proatividade",
       "Capacidade de adaptação": "Capacidade de adaptação",
       "Comunicação interpessoal": "Comunicação interpessoal",
-      "Gerenciamento de tempo": "Gerenciamento de tempo"
+      "Gerenciamento de tempo": "Gerenciamento de tempo",
+      "Inteligência Emocional": "Inteligência Emocional",
+      "Resiliência": "Resiliência"
     }
   };
 
@@ -166,7 +170,7 @@ export default function Home() {
       "Front-end": ["HTML", "CSS", "JavaScript", "Angular", "React Native", "Tailwind CSS", "Bootstrap", "JQuery"],
       "Back-end": ["PHP", "Laravel", "Node.js", "Express", "C#"],
       "Ferramentas de versionamento": ["Git", "GitHub"],
-      "APIs": ["RESTful APIs", "OAuth2", "Laravel Passport"],
+      "APIs": ["RESTful APIs", "OAuth2", "Laravel Passport", "HTTP", "HTTP's", "MVC"],
       "Banco de Dados": ["MySQL", "PostgreSQL"]
     }
   };
@@ -180,7 +184,9 @@ export default function Home() {
     "Proatividade",
     "Capacidade de adaptação",
     "Comunicação interpessoal",
-    "Gerenciamento de tempo"
+    "Gerenciamento de tempo",
+    "Inteligência Emocional",
+    "Resiliência"
   ];
 
   const timeline = [
@@ -251,7 +257,7 @@ theme
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 text-center">
         <div className="mb-8 flex justify-center">
-          <div className="relative h-32 w-32 overflow-hidden rounded-full border-4 border-primary">
+          <div className="relative h-52 w-52 overflow-hidden rounded-full border-4 border-orange-500">
             <img
               src="https://avatars.githubusercontent.com/u/142853773?v=4"
               alt="Profile"
