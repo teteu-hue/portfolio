@@ -1,6 +1,16 @@
 "use client";
 
-import { Github, Linkedin, Mail, User, Code, Briefcase, Clock, Send, Moon, Sun, Download, Languages } from "lucide-react";
+import { Github, 
+         Linkedin, 
+         User, 
+         Code, 
+         Briefcase, 
+         Clock, 
+         Moon, 
+         Sun, 
+         Download, 
+         Languages,
+         MessageCircleCode } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -264,6 +274,12 @@ export default function Home() {
           <Button variant="outline" size="icon">
             <a href="https://www.linkedin.com/in/jefferson-goncalves-oliveira/" target="_blank">
               <Linkedin className="h-5 w-5" />
+            </a>
+          </Button>
+          <Button variant="outline" size="icon">
+            <a href="https://wa.me/5511910692625?text=Ol%C3%A1%2C%20tudo%20bem%3F%0AEstou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio.%0APodemos%20conversar%3F" 
+               target="_blank">
+              <MessageCircleCode className="h-5 w-5" />
             </a>
           </Button>
         </div>
