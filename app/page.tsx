@@ -1,16 +1,18 @@
 "use client";
 
-import { Github, 
-         Linkedin, 
-         User, 
-         Code, 
-         Briefcase, 
-         Clock, 
-         Moon, 
-         Sun, 
-         Download, 
-         Languages,
-         MessageCircleCode } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  User,
+  Code,
+  Briefcase,
+  Clock,
+  Moon,
+  Sun,
+  Download,
+  Languages,
+  MessageCircleCode
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -232,7 +234,7 @@ export default function Home() {
   //const onSubmit = async (data: z.infer<typeof contactFormSchema>) => {
   //  console.log(data);
   //};
-theme
+  theme
   const downloadResume = () => {
     const resumeUrl = "/curriculo/Profile.pdf";
     const link = document.createElement("a");
@@ -296,8 +298,8 @@ theme
             </a>
           </Button>
           <Button variant="outline" size="icon">
-            <a href="https://wa.me/5511910692625?text=Ol%C3%A1%2C%20tudo%20bem%3F%0AEstou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio.%0APodemos%20conversar%3F" 
-               target="_blank">
+            <a href="https://wa.me/5511910692625?text=Ol%C3%A1%2C%20tudo%20bem%3F%0AEstou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio.%0APodemos%20conversar%3F"
+              target="_blank">
               <MessageCircleCode className="h-5 w-5" />
             </a>
           </Button>
@@ -335,7 +337,8 @@ theme
           <TabsContent value="projects" className="mt-6">
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {projects.map((project, index) => (
-                <Card key={index} className="overflow-hidden">
+                  project ? (
+                  <Card key = { index } className = "overflow-hidden" >
                   <img
                     src={project.image}
                     alt="Imagem dos projetos"
@@ -355,112 +358,113 @@ theme
                     </Button>
                   </CardContent>
                 </Card>
+            ) : null
               ))}
-            </div>
-          </TabsContent>
+          </div>
+        </TabsContent>
 
-          <TabsContent value="skills" className="mt-6">
-            <Card>
-              <CardContent className="mt-6">
-                <div className="space-y-8">
-                  <div>
-                    <h2 className="mb-4 text-2xl font-bold">{language === "en" ? "Hard Skills" : "Hard Skills"}</h2>
-                    {Object.entries(translateSkills(hardSkills, language)).map(([category, skills]) => (
-                      <div key={category} className="mb-6">
-                        <h3 className="mb-3 text-xl font-semibold">{category}</h3>
-                        {typeof skills === 'object' && skills !== null && !Array.isArray(skills) ? (
-                          Object.entries(skills).map(([subCategory, subSkills]) => (
-                            <div key={subCategory} className="mb-4">
-                              <h4 className="mb-2 text-lg font-medium">{subCategory}</h4>
-                              <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-                                {subSkills.map((skill: any, index: any) => (
-                                  <div
-                                    key={index}
-                                    className="rounded-lg bg-secondary p-3 text-center text-sm hover:bg-orange-400 hover:text-white"
-                                  >
-                                    {skill}
-                                  </div>
-                                ))}
-                              </div>
+        <TabsContent value="skills" className="mt-6">
+          <Card>
+            <CardContent className="mt-6">
+              <div className="space-y-8">
+                <div>
+                  <h2 className="mb-4 text-2xl font-bold">{language === "en" ? "Hard Skills" : "Hard Skills"}</h2>
+                  {Object.entries(translateSkills(hardSkills, language)).map(([category, skills]) => (
+                    <div key={category} className="mb-6">
+                      <h3 className="mb-3 text-xl font-semibold">{category}</h3>
+                      {typeof skills === 'object' && skills !== null && !Array.isArray(skills) ? (
+                        Object.entries(skills).map(([subCategory, subSkills]) => (
+                          <div key={subCategory} className="mb-4">
+                            <h4 className="mb-2 text-lg font-medium">{subCategory}</h4>
+                            <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+                              {subSkills.map((skill: any, index: any) => (
+                                <div
+                                  key={index}
+                                  className="rounded-lg bg-secondary p-3 text-center text-sm hover:bg-orange-400 hover:text-white"
+                                >
+                                  {skill}
+                                </div>
+                              ))}
                             </div>
-                          ))
-                        ) : (
-                          <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-                            {(skills as string[]).map((skill, index) => (
-                              <div
-                                key={index}
-                                className="rounded-lg bg-secondary p-3 text-center text-sm hover:bg-orange-400 hover:text-white"
-                              >
-                                {skill}
-                              </div>
-                            ))}
                           </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-
-                  <div>
-                    <h2 className="mb-4 text-2xl font-bold">{language === "en" ? "Soft Skills" : "Soft Skills"}</h2>
-                    <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
-                      {translateSkills(softSkills, language).map((skill: any, index: any) => (
-                        <div
-                          key={index}
-                          className="rounded-lg bg-secondary p-3 text-center text-sm hover:bg-orange-400 hover:text-white"
-                        >
-                          {skill}
+                        ))
+                      ) : (
+                        <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+                          {(skills as string[]).map((skill, index) => (
+                            <div
+                              key={index}
+                              className="rounded-lg bg-secondary p-3 text-center text-sm hover:bg-orange-400 hover:text-white"
+                            >
+                              {skill}
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value="timeline" className="mt-6">
-            <Card>
-              <CardContent className="mt-6">
-                <div className="space-y-8">
-                  {timeline.map((item, index) => (
-                    <div key={index} className="relative pl-8 before:absolute before:left-0 before:top-0 before:h-full before:w-[2px] before:bg-primary">
-                      <div className="absolute -left-2 top-0 h-4 w-4 rounded-full bg-primary"></div>
-                      <div className="mb-1 text-sm text-muted-foreground">{item.year}</div>
-                      <h3 className="text-lg font-bold">
-                        {language === "en" ? item.title.en : item.title.pt}
-                      </h3>
-                      <div className="text-sm text-muted-foreground">{item.company}</div>
-                      <p className="mt-2">
-                        {language === "en" ? item.description.en : item.description.pt}
-                      </p>
+                      )}
                     </div>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
 
-          <TabsContent value="about" className="mt-6">
-            <Card>
-              <CardContent className="prose prose-lg mt-6 dark:prose-invert">
-                <p>
-                  {language === "en"
-                    ? `
+                <div>
+                  <h2 className="mb-4 text-2xl font-bold">{language === "en" ? "Soft Skills" : "Soft Skills"}</h2>
+                  <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
+                    {translateSkills(softSkills, language).map((skill: any, index: any) => (
+                      <div
+                        key={index}
+                        className="rounded-lg bg-secondary p-3 text-center text-sm hover:bg-orange-400 hover:text-white"
+                      >
+                        {skill}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="timeline" className="mt-6">
+          <Card>
+            <CardContent className="mt-6">
+              <div className="space-y-8">
+                {timeline.map((item, index) => (
+                  <div key={index} className="relative pl-8 before:absolute before:left-0 before:top-0 before:h-full before:w-[2px] before:bg-primary">
+                    <div className="absolute -left-2 top-0 h-4 w-4 rounded-full bg-primary"></div>
+                    <div className="mb-1 text-sm text-muted-foreground">{item.year}</div>
+                    <h3 className="text-lg font-bold">
+                      {language === "en" ? item.title.en : item.title.pt}
+                    </h3>
+                    <div className="text-sm text-muted-foreground">{item.company}</div>
+                    <p className="mt-2">
+                      {language === "en" ? item.description.en : item.description.pt}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="about" className="mt-6">
+          <Card>
+            <CardContent className="prose prose-lg mt-6 dark:prose-invert">
+              <p>
+                {language === "en"
+                  ? `
                     I am a web developer with a self-taught journey that began at the age of 22, with training at Trybe, where I built a solid foundation in Programming Logic. Since then, I have been specializing in Back-End development, with experience in Node.js, Express, MySQL, React Native, and Angular, in addition to deepening my knowledge in the PHP, Laravel, and PostgreSQL stacks.
                     I focus on web application security, preventing SQL Injection, with an emphasis on OAuth2 authentication and JWT for Rest APIs.
                     In my free time, I practice capoeira, ride my bike, and enjoy dedicating myself to reading and writing about topics that fascinate me.`
-                    : `
+                  : `
                     Sou desenvolvedor web com uma trajetória autodidata iniciada aos 22 anos, com formação na Trybe, onde desenvolvi uma base sólida em Lógica de Programação. Desde então, venho me especializando em desenvolvimento Back-End, com experiência em  Node.js, Express, MySQL, React Native e Angular, além de aprofundar meus conhecimentos nas stacks PHP, Laravel e PostgreSQL. 
                     Tenho foco em segurança das aplicações web, prevenindo SQL Injection e com ênfase em autenticação OAuth2 e JWT para APIs Rest. 
                     No meu tempo livre, pratico capoeira, ando de bicicleta e gosto de me dedicar à leitura e escrita sobre temas que me fascinam.
                     `}
-                </p>
-              </CardContent>
-            </Card>
-          </TabsContent>
+              </p>
+            </CardContent>
+          </Card>
+        </TabsContent>
 
-        </Tabs>
-      </section>
-    </main>
+      </Tabs>
+    </section>
+    </main >
   );
 }
