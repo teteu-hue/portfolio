@@ -338,7 +338,7 @@ theme
                 <Card key={index} className="overflow-hidden">
                   <img
                     src={project.image}
-                    alt="Imagem de projetos"
+                    alt="Imagem dos projetos"
                     className="h-48 w-full object-cover"
                   />
                   <CardContent className="mt-4">
