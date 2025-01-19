@@ -65,6 +65,19 @@ export default function Home() {
       image: "https://wallpapers.com/images/hd/star-wars-pictures-31ajlkqgwt3v5vii.jpg",
       link: "https://github.com/teteu-hue/Catalogo-Starwars",
     },
+    ,
+    {
+      title: {
+        pt: "Academia Tigers",
+        en: "Tigers Gym"
+      },
+      description: {
+        pt: "Projeto desenvolvido para a Academia Tigers. Feito para ampliar a busca online pela academia e também atrair mais alunos de forma orgânica através da internet.",
+        en: "Project developed for the Tigers Academy. Made to expand the online search for the academy and also attract more students organically through the internet."
+      },
+      image: "/image/tigers.jpg",
+      link: "http://academia-tigers.netlify.app/",
+    }
   ];
 
   const translations: any = {
